@@ -1,0 +1,110 @@
+#kendo-animation {
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	overflow: hidden;
+	border:1px solid #ccc;
+	background: url('imgs/background.jpg')  no-repeat;
+	background-size: 100% 100%;
+}
+
+#left-body {
+	position: absolute;
+	left: 60px;
+	top: 190px;
+}
+
+
+#arm {
+	position: absolute;
+	left:-160px;
+	top:140px;
+}
+
+#men {
+	position: absolute;
+	left:250px;
+	top:240px;
+}
+
+#right-body {
+	position: absolute;
+	right: 60px;
+	top: 310px;
+}
+
+#right-head {
+	position: absolute;
+	right: 130px;
+	top: 190px;
+}
+
+/** Animations ***/
+
+@keyframes arm {
+	from { transform: rotate(-30deg); }
+	to { transform: rotate(4deg); }
+}
+
+@-webkit-keyframes arm {
+	from { -webkit-transform: rotate(-30deg); }
+	to { -webkit-transform: rotate(4.5deg); }
+}
+
+@-moz-keyframes arm {
+	from { -moz-transform: rotate(-30deg); }
+	to { -moz-transform: rotate(4deg); }
+}
+
+/**** Men ****/
+
+@keyframes men {
+	from { transform: scaleX(0.5) scaleY(0.5); opacity: 0; }
+	to { transform: scaleX(1) scaleY(1); left:300px; }
+}
+
+@-moz-keyframes men {
+	from { -moz-transform: scaleX(0.5) scaleY(0.5); opacity: 0; }
+	to { -moz-transform: scaleX(1) scaleY(1); left:300px; }
+}
+
+@-webkit-keyframes men {
+	from { -webkit-transform: scaleX(0.5) scaleY(0.5); opacity: 0; }
+	to { -webkit-transform: scaleX(1) scaleY(1); left:300px; }
+}
+
+/***** right head ***/
+
+@keyframes arm {
+	from { top:190px; }
+	to { top:198px; -webkit-transform:rotate(-5deg); }
+}
+@-webkit-keyframes shock {
+	from { top:190px; }
+	to { top:198px; -webkit-transform:rotate(-5deg); }
+}
+@-moz-keyframes shock {
+	from { top:190px; }
+	to { top:198px; -moz-transform:rotate(-5deg); }
+}
+
+#arm {
+	animation: arm 0.5s cubic-bezier(1.000, 0.000, 0.000, 1.000) 0s infinite alternate;
+	-webkit-animation: arm 0.5s cubic-bezier(1.000, 0.000, 0.000, 1.000) 0s infinite alternate;
+	-moz-animation: arm 0.5s cubic-bezier(1.000, 0.000, 0.000, 1.000) 0s infinite alternate;
+}
+
+#men {
+	animation: men 0.5s cubic-bezier(1.000, 0.000, 0.000, 2.400) 0s infinite alternate;
+	-webkit-animation: men 0.5s cubic-bezier(1.000, 0.000, 0.000, 2.400) 0s infinite alternate;
+	-moz-animation: men 0.5s cubic-bezier(1.000, 0.000, 0.000, 2.400) 0s infinite alternate;
+}
+
+#right-head {
+	animation: shock 0.5s cubic-bezier(1.000, 0.000, 0.000, 1) 0.22s infinite alternate;
+	-webkit-animation: shock 0.5s cubic-bezier(1.000, 0.000, 0.000, 1) 0.22s infinite alternate;
+	-moz-animation: shock 0.5s cubic-bezier(1.000, 0.000, 0.000, 1) 0.22s infinite alternate;
+}
+
