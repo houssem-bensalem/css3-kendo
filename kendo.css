@@ -5,9 +5,12 @@
 	margin-top: 50px;
 	position: relative;
 	overflow: hidden;
-	border:1px solid #ccc;
+	border:3px solid #000;
 	background: url('imgs/background.jpg')  no-repeat;
 	background-size: 100% 100%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #left-body {
@@ -39,6 +42,18 @@
 	position: absolute;
 	right: 130px;
 	top: 190px;
+}
+
+author a {
+	font-family: arial, tahoma, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	position: absolute;
+	color: #FFF;
+	top: 10px;
+	left: 20px;
+	text-shadow:1px 0px 5px #333333;
 }
 
 /** Animations ***/
